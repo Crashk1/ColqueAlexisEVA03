@@ -5,7 +5,7 @@ import java.util.Set;
 
 import ar.edu.unlam.pb2.eva03.enumeradores.TipoDeEvento;
 
-public class Club{
+public class Club {
 
 	private String nombre;
 	private Set<Deportista> socios;
@@ -22,7 +22,7 @@ public class Club{
 	}
 
 	public void agregarDeportista(Deportista deportista) {
-		socios.add(deportista);
+		this.socios.add(deportista);
 	}
 	
 	public Integer getCantidadSocios() {
@@ -49,11 +49,12 @@ public class Club{
 		switch (competencias.get(string).getTipo()) {
 		
 		case CARRERA_5K: 
-			if (deportista.getEspecialidad() != "Corredor")
+			if (deportista.getEspecialidad() != "Corredor") {
 				throw new NoEstaPreparado();
+			}
 			else {
 				competencias.get(string).agregarParticipante(deportista);
-			return true;
+				return true;
 			}
 		case CARRERA_10K: 
 			if (deportista.getEspecialidad() != "Corredor")

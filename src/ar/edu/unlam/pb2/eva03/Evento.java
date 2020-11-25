@@ -11,7 +11,7 @@ public class Evento {
 
 	private TipoDeEvento tipo;
 	private Integer numeroDeInscripcion;
-	private Map<Integer, Deportista> participantes;
+	private HashMap<Integer, Deportista> participantes;
 	
 	
 	public Evento(TipoDeEvento tipo) {
@@ -40,7 +40,7 @@ public class Evento {
 		this.numeroDeInscripcion = numeroDeInscripcion;
 	}
 
-	public Map<Integer, Deportista> getParticipantes() {
+	public HashMap<Integer, Deportista> getParticipantes() {
 		return participantes;
 	}
 	
